@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root{
+    --primary-color:#333;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #ddd;
+    font-size: 12px;
+
+    padding: 0;
+    margin: 0;
+}
+/* Start Site Setting */
+.sitesettings{
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+    padding: 10px;
+
+    position: fixed;
+    right: 10px;
+    bottom: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 100;
+}
+.sitesettings .sitesettings-item{
+    background-color: #f9f9f9;
+    padding: 5px;
+    margin: 10px 0;
+    opacity: 0.5;
+}
+
+.sitesettings .sitesettings-item:hover{
+    opacity: 1;
+}
+.ani-rotates{
+    animation-name: myanirotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes myanirotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}   
+
+/* End Site Setting */
+/* Start Left Sidebar Section */
+.lines1,.lines2,.lines3{
+    width: 25px;
+    height: 3px;
+    margin: 6px;
+}
+.sidebars{
+    min-height: 100vh;
+    background-color: var(--primary-color);
+}
+.sidebarlinks{
+    opacity: 0.75;
+    
+    position: relative;
+
+    transition: all .4s;
+}
+.sidebarlinks:hover{
+    opacity: 1;
+    background-color: #555;
+}
+.currents{
+    box-shadow: -2px 0 10px #111;
+    opacity: 1;
+
+    transition: transform 0.3s;
+}
+.currents:hover{
+    transform: translateY(-1px);
+}
+
+.mores{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+/* start top sidebar */
+.topnavbars{
+    background-color: var(--primary-color);
+}
+.iconparents{
+
+}
+.iconbullets{
+    color: #888;
+
+    position: relative;
+}
+.iconbullets::after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+
+    position: absolute;
+    left: 20px;
+    top: 3px;
+}
+.breadcrumb a{
+    color: #f4f4f4;
+    text-decoration: none;
+}
+/* end top sidebar */
+/* End Left Sidebar Section */
+@media(max-width:768px){
+    .topnavbars,.sidebars{
+        position: static;
+    }
+}
+/* Start Panel section */
+.cardboxs{
+    transition: all .3s;
+}
+.cardboxs:hover{
+    box-shadow: 1px 3px 3px #bbb;
+    transform: translateY(-1px);
+}
+
+
+/* End Panel section */
